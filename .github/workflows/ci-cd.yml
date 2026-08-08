@@ -18,21 +18,24 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up JDK 21
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: '21'
+      - name: Verify static website files
+        run: |
+          for file in index.html styles.css script.js; do
+            if [ ! -f "$file" ]; then
+              echo "ERROR: $file not found"
+              exit 1
+            fi
+            echo "OK: $file found"
+          done
 
-      - name: Cache Maven packages
-        uses: actions/cache@v4
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-maven-
-
-      - name: Install dependencies
-        run: mvn dependency:resolve -B
-
-      - name: Build project
-        run: mvn package -DskipTests -B
+      - name: Validate HTML structure
+        run: |
+          if ! grep -q '<!DOCTYPE html>' index.html; then
+            echo "ERROR: Missing DOCTYPE declaration"
+            exit 1
+          fi
+          if ! grep -q '</html>' index.html; then
+            echo "ERROR: Missing closing html tag"
+            exit 1
+          fi
+          echo "HTML structure validated"
