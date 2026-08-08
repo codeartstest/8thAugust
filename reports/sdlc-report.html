@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SDLC Sprint Report — Cambodia Website</title>
+<style>
+:root { --red:#9E1B32; --gold:#D5A021; --white:#fff; --dark:#1a1a1a; --gray:#666; --light:#f5f5f5; --green:#28a745; --orange:#fd7e14; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; color:var(--dark); background:var(--light); line-height:1.6; }
+.container { max-width:960px; margin:0 auto; padding:32px 24px; }
+header { background:var(--red); color:var(--white); padding:40px 0; text-align:center; }
+header h1 { font-size:1.8rem; color:var(--gold); margin-bottom:8px; }
+header .meta { font-size:0.9rem; opacity:0.9; }
+.badge { display:inline-block; padding:4px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; margin-top:12px; }
+.badge-pass { background:var(--green); color:var(--white); }
+h2 { color:var(--red); border-left:4px solid var(--gold); padding-left:12px; margin:32px 0 16px; font-size:1.3rem; }
+table { width:100%; border-collapse:collapse; margin:16px 0; background:var(--white); border-radius:8px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.08); }
+th { background:var(--red); color:var(--white); padding:12px 16px; text-align:left; font-size:0.85rem; }
+td { padding:10px 16px; border-bottom:1px solid #eee; font-size:0.9rem; }
+tr:last-child td { border-bottom:none; }
+.status-pass { color:var(--green); font-weight:600; }
+.status-skip { color:var(--gray); }
+a { color:var(--red); text-decoration:none; }
+a:hover { text-decoration:underline; }
+.card { background:var(--white); border-radius:8px; padding:20px; margin:16px 0; box-shadow:0 1px 4px rgba(0,0,0,0.08); }
+.card h3 { color:var(--dark); margin-bottom:8px; font-size:1rem; }
+.card p { color:var(--gray); font-size:0.9rem; margin-bottom:8px; }
+.chart { display:flex; gap:12px; align-items:flex-end; height:120px; margin:16px 0; }
+.bar { flex:1; background:var(--gold); border-radius:4px 4px 0 0; display:flex; align-items:flex-start; justify-content:center; color:var(--white); font-size:0.75rem; font-weight:600; padding-top:4px; }
+.retro { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px 0; }
+.retro div { background:var(--white); border-radius:8px; padding:16px; box-shadow:0 1px 4px rgba(0,0,0,0.08); }
+.retro h3 { color:var(--red); font-size:0.9rem; margin-bottom:8px; }
+.retro ul { list-style:none; }
+.retro li { font-size:0.85rem; color:var(--gray); padding:4px 0; }
+.retro li:before { content:"\203A"; color:var(--gold); font-weight:700; margin-right:8px; }
+footer { text-align:center; padding:24px; color:var(--gray); font-size:0.8rem; }
+@media(max-width:768px){ .retro{grid-template-columns:1fr;} table{font-size:0.8rem;} th,td{padding:8px 10px;} }
+</style>
+</head>
+<body>
+<header>
+<h1>SDLC Sprint Report</h1>
+<p class="meta">Cambodia Website &mdash; Sprint 1 &mdash; 2026-08-08</p>
+<span class="badge badge-pass">COMPLETED</span>
+</header>
+<div class="container">
+
+<h2>Project Overview</h2>
+<table>
+<tr><th>Field</th><th>Value</th></tr>
+<tr><td>Project</td><td><a href="https://github.com/codeartstest/8thAugust" target="_blank">codeartstest/8thAugust</a></td></tr>
+<tr><td>Release</td><td>v1.0.0 &mdash; <a href="https://github.com/codeartstest/8thAugust/releases/tag/v1.0.0" target="_blank">View Release</a></td></tr>
+<tr><td>Branch Strategy</td><td>feature/frontend/cambodia-website &rarr; develop &rarr; main</td></tr>
+<tr><td>Azure DevOps</td><td><a href="https://dev.azure.com/adnansomer/DemoCodeArts" target="_blank">DemoCodeArts Project</a></td></tr>
+<tr><td>Files Created</td><td>index.html, styles.css, script.js + SDD docs (spec, design, tasks)</td></tr>
+<tr><td>Total Lines</td><td>544 insertions across 7 files</td></tr>
+</table>
+
+<h2>Pipeline Summary</h2>
+<table>
+<tr><th>Step</th><th>Status</th><th>Agent</th><th>Key Outcome</th></tr>
+<tr><td>0.DA</td><td class="status-pass">Pass</td><td>Architect</td><td>SDD spec.md, design.md, tasks.md created</td></tr>
+<tr><td>1</td><td class="status-pass">Pass</td><td>PM</td><td>1 Epic, 1 Issue, 1 Task created in Azure DevOps</td></tr>
+<tr><td>2</td><td class="status-pass">Pass</td><td>PM + Dev</td><td>Feature branch feature/frontend/cambodia-website created</td></tr>
+<tr><td>3</td><td class="status-pass">Pass</td><td>Frontend</td><td>index.html, styles.css, script.js developed</td></tr>
+<tr><td>4</td><td class="status-pass">Pass</td><td>Code Reviewer</td><td>PR <a href="https://github.com/codeartstest/8thAugust/pull/1" target="_blank">#1</a> reviewed &mdash; APPROVED (0 critical)</td></tr>
+<tr><td>5</td><td class="status-skip">Skipped</td><td>Tester</td><td>No Playwright/TDD selected &mdash; CI/CD file validation used</td></tr>
+<tr><td>6</td><td class="status-pass">Pass</td><td>DevOps</td><td><a href="https://github.com/codeartstest/8thAugust/actions" target="_blank">GitHub Actions</a> &mdash; 2/2 runs passed</td></tr>
+<tr><td>7</td><td class="status-pass">Pass</td><td>PM + Dev</td><td>Merged develop &rarr; main, tagged v1.0.0</td></tr>
+<tr><td>8</td><td class="status-skip">Deferred</td><td>DevOps</td><td>No deployment target selected &mdash; static site, deploy later</td></tr>
+<tr><td>9</td><td class="status-pass">Pass</td><td>PM + Dev</td><td>Sprint closed, this report generated</td></tr>
+</table>
+
+<h2>Azure DevOps Work Items</h2>
+<table>
+<tr><th>ID</th><th>Type</th><th>Title</th><th>State</th></tr>
+<tr><td><a href="https://dev.azure.com/adnansomer/DemoCodeArts/_workitems/edit/145" target="_blank">#145</a></td><td>Epic</td><td>Cambodia Website</td><td class="status-pass">Closed</td></tr>
+<tr><td><a href="https://dev.azure.com/adnansomer/DemoCodeArts/_workitems/edit/146" target="_blank">#146</a></td><td>Issue</td><td>Build About Cambodia page</td><td class="status-pass">Done</td></tr>
+<tr><td><a href="https://dev.azure.com/adnansomer/DemoCodeArts/_workitems/edit/147" target="_blank">#147</a></td><td>Task</td><td>Implement HTML/CSS/JS for About Cambodia page</td><td class="status-pass">Done</td></tr>
+</table>
+
+<h2>CI/CD Results</h2>
+<div class="card">
+<h3>GitHub Actions &mdash; <a href="https://github.com/codeartstest/8thAugust/actions" target="_blank">View All Runs</a></h3>
+<table>
+<tr><th>Run</th><th>Trigger</th><th>Branch</th><th>Status</th><th>Duration</th></tr>
+<tr><td>Run 1</td><td>pull_request</td><td>feature/frontend/cambodia-website</td><td class="status-pass">Success</td><td>7s</td></tr>
+<tr><td>Run 2</td><td>push</td><td>develop</td><td class="status-pass">Success</td><td>10s</td></tr>
+</table>
+<p>Build stage: Static file validation + HTML structure check</p>
+</div>
+
+<h2>Code Review Results</h2>
+<div class="card">
+<h3>PR <a href="https://github.com/codeartstest/8thAugust/pull/1" target="_blank">#1</a> &mdash; APPROVED</h3>
+<table>
+<tr><th>Category</th><th>Verdict</th><th>Critical</th><th>Warnings</th></tr>
+<tr><td>Security</td><td class="status-pass">Pass</td><td>0</td><td>0</td></tr>
+<tr><td>HTML Quality</td><td class="status-pass">Pass</td><td>0</td><td>0</td></tr>
+<tr><td>CSS Quality</td><td class="status-pass">Pass</td><td>0</td><td>1 (fixed)</td></tr>
+<tr><td>JS Quality</td><td class="status-pass">Pass</td><td>0</td><td>1 (fixed)</td></tr>
+<tr><td>CI/CD</td><td class="status-pass">Pass</td><td>0</td><td>1 (fixed)</td></tr>
+</table>
+<p>3 non-blocking warnings addressed: CI trigger fix, :focus-visible styles, IntersectionObserver guard</p>
+</div>
+
+<h2>Sprint Velocity</h2>
+<div class="chart">
+<div class="bar" style="height:100%">10</div>
+</div>
+<p style="font-size:0.85rem;color:var(--gray)">Story points: 10 completed (1 epic, 1 issue, 1 task)</p>
+
+<h2>Retrospective</h2>
+<div class="retro">
+<div>
+<h3>What Went Well</h3>
+<ul>
+<li>Full SDLC pipeline executed end-to-end in a single session</li>
+<li>GitHub + Azure DevOps coexistence worked seamlessly</li>
+<li>Code review caught CI/CD trigger bug before merge</li>
+<li>All CI/CD runs passed on first attempt</li>
+<li>SDD methodology kept requirements traceable</li>
+</ul>
+</div>
+<div>
+<h3>What Could Improve</h3>
+<ul>
+<li>Add Playwright for E2E visual testing</li>
+<li>Configure GitHub Pages for static site deployment</li>
+<li>Add more work items for future sections (Culture, Gallery)</li>
+<li>Consider adding SonarCloud for code quality gates</li>
+<li>Set up Azure DevOps Pipelines alongside GitHub Actions</li>
+</ul>
+</div>
+</div>
+
+</div>
+<footer>
+<p>Generated by Huawei Cloud CodeArts Agent &mdash; SDLC Agentic Pipeline &mdash; 2026-08-08</p>
+</footer>
+</body>
+</html>
