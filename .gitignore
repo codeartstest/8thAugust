@@ -1,0 +1,21 @@
+# Environment config (contains Azure DevOps config — PAT is runtime env var only)
+.env
+
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# OS
+.DS_Store
+Thumbs.db

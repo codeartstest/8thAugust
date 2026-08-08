@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "azure-devops-cli": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "skillPath": "skills/azure-devops-cli/SKILL.md",
+      "computedHash": "598a33d14dd669d454019feb080daeac1e361bfacde21dc3bd3382e8da283e64"
+    }
+  }
+}
