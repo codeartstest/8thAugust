@@ -75,6 +75,11 @@ header {
     border-bottom-color: var(--color-gold);
 }
 
+.nav-link:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;

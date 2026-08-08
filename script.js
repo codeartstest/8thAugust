@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
         rootMargin: '-70px 0px -60% 0px'
     };
 
+    if (!('IntersectionObserver' in window)) return;
+
     const sectionObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
